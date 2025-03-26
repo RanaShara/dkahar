@@ -26,17 +26,17 @@ function incrementCount(type) {
     switch(type) {
         case 'subhan':
             subhanCount++;
-            textToShow = 'سبحان الله';
+            textToShow = 'سُبْحَانَ اللَّهِ ';
             targetElement = document.getElementById('subhanCount');
             break;
         case 'alhamd':
             alhamdCount++;
-            textToShow = 'الحمد لله';
+            textToShow = 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ ';
             targetElement = document.getElementById('alhamdCount');
             break;
         case 'akbar':
             akbarCount++;
-            textToShow = 'الله أكبر';
+            textToShow = 'أستغفر الله';
             targetElement = document.getElementById('akbarCount');
             break;
         case 'salawat':

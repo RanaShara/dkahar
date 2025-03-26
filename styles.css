@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Scheherazade New", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #643843;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    overflow: auto;
+}
+
+.main-container {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading__title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #E7CBCB;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__tasbih-icon {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card__icon {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card__title {
+    font-weight: 400;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.count-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.count-display {
+    font-size: 3rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.reset-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.reset-icon:hover {
+    color: #ffffff;
+}
+
+.btn-tasbeeh {
+    background-color: #99627A;
+    color: #E7CBCB;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid #C88EA7;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-tasbeeh:hover {
+    background-color: #C88EA7;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+/* CARD BACKGROUNDS */
+.card-1 { 
+    background: linear-gradient(135deg, #99627A, #C88EA7);
+}
+
+.card-2 { 
+    background: linear-gradient(135deg, #C88EA7, #E7CBCB);
+}
+
+.card-3 { 
+    background: linear-gradient(135deg, #E7CBCB, #99627A);
+}
+
+.card-4 { 
+    background: linear-gradient(135deg, #643843, #99627A);
+}
+
+.card-5 { 
+    background: linear-gradient(135deg, #C88EA7, #643843);
+}
+
+/* Floating Text Animation */
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1.5);
+    }
+}
+
+.floating-text {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    animation: floatUp 1.5s ease-out;
+    z-index: 10;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+    .heading__title {
+        font-size: 1.5rem;
+    }
+    .count-display {
+        font-size: 2.5rem;
+    }
+}
+.footer {
+    
+    color: #FBF5E5; 
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

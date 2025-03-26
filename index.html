@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <!-- Google Fonts - Scheherazade New -->
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Hidden audio element for click sound -->
+    <audio id="clickSound">
+        <source src="data:audio/wav;,//uQRAAAAWMQ//uHAAAEAAABAAAAAABGxB4IwAEFAAADAAAAABFQFDEAAATAAAD6AAAAT4AAADqAAABN/8AAAE6/wAABFP/AAAEUwAAAuAAAAAAABJRAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=">
+    </audio>
+
+    <div class="main-container">
+        <div class="heading">
+            <h1 class="heading__title">موقع التسبيح التفاعلي</h1>
+        </div>
+        
+        <div class="cards">
+            <div class="card card-1" onclick="incrementCount('subhan')">
+                <div class="card__header">
+                    <i class="fas fa-rosary-beads card__tasbih-icon"></i>
+                    <div class="card__icon"><i class="fas fa-praying-hands"></i></div>
+                </div>
+                <h2 class="card__title">سُبْحَانَ اللَّهِ </h2>
+                <div class="count-container">
+                    <div id="subhanCount" class="count-display">0</div>
+                    <i class="fas fa-redo reset-icon" onclick="resetSingleCount('subhan', event)"></i>
+                </div>
+            </div>
+            
+            <div class="card card-2" onclick="incrementCount('alhamd')">
+                <div class="card__header">
+                    <i class="fas fa-rosary-beads card__tasbih-icon"></i>
+                    <div class="card__icon"><i class="fas fa-praying-hands"></i></div>
+                </div>
+                <h2 class="card__title"> سُبْحَانَ اللَّهِ وَبِحَمْدِهِ </h2>
+                <div class="count-container">
+                    <div id="alhamdCount" class="count-display">0</div>
+                    <i class="fas fa-redo reset-icon" onclick="resetSingleCount('alhamd', event)"></i>
+                </div>
+            </div>
+            
+            <div class="card card-3" onclick="incrementCount('akbar')">
+                <div class="card__header">
+                    <i class="fas fa-rosary-beads card__tasbih-icon"></i>
+                    <div class="card__icon"><i class="fas fa-praying-hands"></i></div>
+                </div>
+                <h2 class="card__title">أستغفر الله</h2>
+                <div class="count-container">
+                    <div id="akbarCount" class="count-display">0</div>
+                    <i class="fas fa-redo reset-icon" onclick="resetSingleCount('akbar', event)"></i>
+                </div>
+            </div>
+
+            <div class="card card-4" onclick="incrementCount('salawat')">
+                <div class="card__header">
+                    <i class="fas fa-rosary-beads card__tasbih-icon"></i>
+                    <div class="card__icon"><i class="fas fa-praying-hands"></i></div>
+                </div>
+                <h2 class="card__title">اللهم صلِّ على محمد</h2>
+                <div class="count-container">
+                    <div id="salawatCount" class="count-display">0</div>
+                    <i class="fas fa-redo reset-icon" onclick="resetSingleCount('salawat', event)"></i>
+                </div>
+            </div>
+
+            <div class="card card-5" onclick="incrementCount('haula')">
+                <div class="card__header">
+                    <i class="fas fa-rosary-beads card__tasbih-icon"></i>
+                    <div class="card__icon"><i class="fas fa-praying-hands"></i></div>
+                </div>
+                <h2 class="card__title">لا حول ولا قوة إلا بالله</h2>
+                <div class="count-container">
+                    <div id="haulaCount" class="count-display">0</div>
+                    <i class="fas fa-redo reset-icon" onclick="resetSingleCount('haula', event)"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="reset-btn">
+            <button class="btn-tasbeeh" onclick="resetCount()">
+                <i class="fas fa-redo"></i> إعادة الكل
+            </button>
+        </div>
+    </div>
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+<footer class="footer">
+    <p>&copy; 2025 RS | جميع الحقوق محفوظة</p>
+</footer>
+</html>
+        
+   
